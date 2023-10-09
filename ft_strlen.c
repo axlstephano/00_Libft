@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 21:59:32 by axcastil          #+#    #+#             */
-/*   Updated: 2023/09/29 16:55:38 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/09 09:52:31 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	main(void)
 	char	*string;
 
 	string = "holamundo";
-	ft_strlen(string);
-	printf("%zu", ft_strlen(string));
+	printf("%d", (int)ft_strlen(string));
 	return (0);
 }*/

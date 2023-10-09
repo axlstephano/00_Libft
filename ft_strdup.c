@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 16:25:26 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/02 17:52:06 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/04 12:30:44 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char	*ft_strdup(const char *s1)
 /*int main()
 {
     char *str = "hola";
-    ft_strdup(str);
     printf("%s", ft_strdup(str));
     return 0;
 }*/

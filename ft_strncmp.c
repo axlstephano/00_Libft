@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:08:39 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/01 17:24:41 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:31:03 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (n--)
+	while (n-- && (*str1 != '\0' || *str2 != '\0'))
 	{
 		if (*str1 != *str2)
-			return ((int)(*str1 - *str2));
+			return (*str1 - *str2);
 		str1++;
 		str2++;
 	}

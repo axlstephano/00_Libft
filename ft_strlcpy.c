@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 15:36:43 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/02 16:18:09 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:08:59 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	src_len;
 
-	if (!dst || !src)
-		return (0);
 	src_len = ft_strlen(src);
 	if (dstsize == 0)
 		return (src_len);
@@ -31,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
-//linea 8 llama a la funcion strlen de la libreria
+
 /*int main() 
 {
     char destino[10];

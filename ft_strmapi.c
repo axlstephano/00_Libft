@@ -1,39 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 21:39:49 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/09 15:03:46 by axcastil         ###   ########.fr       */
+/*   Created: 2023/10/09 10:11:43 by axcastil          #+#    #+#             */
+/*   Updated: 2023/10/09 16:04:00 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	char	*mapi;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
+	mapi = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!mapi)
+		return (NULL);
 	i = 0;
-	if (dst == src || !n)
-		return (dst);
-	while (i < n)
+	while (s[i])
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		mapi[i] = f(i, s[i]);
 		i++;
 	}
-	return (dst);
+	mapi[i] = '\0';
+	return (mapi);
 }
 
-/*int	main(void)
-{
-	char	*string1;
-	char	string2[20];
+/*#include <stdio.h>
 
-	string1 = "holamundo";
-	ft_memcpy(string2, string1, 5);
-	printf("%s", string2);
-	return (0);
+char f(unsigned int i, char c)
+{
+	char str;
+	str = c + 1;
+	return (str);
+}
+
+int main()
+{
+	char str1[] = "abc";
+	char* str2;
+	str2 = ft_strmapi(str1, *f);
+	printf("%s\n", str2);
 }*/

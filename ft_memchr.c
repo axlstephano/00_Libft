@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:31:26 by axcastil          #+#    #+#             */
-/*   Updated: 2023/09/29 19:25:09 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:14:01 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 
-	if (!s)
-		return (NULL);
 	str = (unsigned char *)s;
 	if (n > 0)
 	{
@@ -33,9 +31,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*int main()
 {
     const char *str = "Hola, mundo!";
-    char target = 'm';
+    char search = 'm';
     size_t len = strlen(str);
-    const char *result = memchr(str, target, len);
-    printf("se encuentra en la posición %s .\n", result);
+    char *result = memchr(str, search, len);
+    printf("se encuentra en la posición: %s\n", result - str);
     return 0;
 }*/
