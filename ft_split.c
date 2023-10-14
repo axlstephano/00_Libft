@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 16:59:26 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/09 14:52:47 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/14 18:31:47 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,20 +83,20 @@ char	**ft_split(char const *s, char c)
 			return (ft_free(*matrix), NULL);
 		start += wordsize;
 	}
-	matrix[start] = 0;
+	matrix[j] = 0;
 	return (matrix);
 }
-//int	main()
-//{
-//	char string[] = "hola como2 estas dhd";
-//	char sub = ' ';
-//	//printf ("%d", (int)words(string, sub));
-//	char **matrixx = ft_split(string, sub);
-//	int i = 0;
-//	while (i < wordcount(string, sub) + 1)
-//	{
-//		printf("%s\n", matrixx[i]);
-//		i++;
-//	}
-//	return 0;
-//}
+/*int	main()
+{
+	char string[] = "hola como2 estas dhd";
+	char sub = ' ';
+	//printf ("%d", (int)words(string, sub));
+	char **matrixx = ft_split(string, sub);
+	int i = 0;
+	while (i < wordcount(string, sub) + 1)
+	{
+		printf("%s\n", matrixx[i]);
+		i++;
+	}
+	return 0;
+}*/

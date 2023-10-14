@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:15:55 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/06 16:23:13 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:17:58 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*string;
 
-	string = 0;
+	string = NULL;
 	while (*s)
 	{
 		if (*s == (unsigned char)c)
 			string = (char *)s;
 		s++;
 	}
-	if (!c)
+	if (*s == (char)c)
 		return ((char *)s);
 	return (string);
 }

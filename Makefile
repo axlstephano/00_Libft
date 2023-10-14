@@ -6,9 +6,11 @@
 #    By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 13:53:55 by axcastil          #+#    #+#              #
-#    Updated: 2023/10/01 16:56:24 by axcastil         ###   ########.fr        #
+#    Updated: 2023/10/12 18:34:17 by axcastil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
 
 SRCS			= $(shell find . -name "*.c")
 OBJS			= $(SRCS:.c=.o)

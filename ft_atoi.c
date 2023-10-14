@@ -6,13 +6,13 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 21:36:17 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/01 17:04:39 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/12 18:40:55 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {	
 	int	sign;
 	int	sol;

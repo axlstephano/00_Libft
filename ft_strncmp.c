@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:08:39 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/09 15:31:03 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/14 16:45:39 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*
+int main()
+{
+	char string[] = "hola";
+	char string2[] = "holas";
+	printf("%d", ft_strncmp(string, string2, 5));
+	return 0;
+}*/

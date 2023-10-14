@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:20:02 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/11 16:03:05 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:48:29 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	s[i] = '\0';
 }
 
-//#include <stdio.h>
-//void printichar(unsigned int i, char *character)
-//{
-//    printf("Índice: %u, Carácter: %c\n", i, *character);
-//}
-//int main()
-//{
-//    char str[] = "hello";
-//    printf("Original: %s\n", str);
-//    ft_striteri(str, printichar);
-//    return (0);
-//}
+/*include <stdio.h>
+
+int main()
+{
+	char str[] = "hello";
+	printf("Original: %s\n", str);
+	ft_striteri(str, printichar);
+	return (0);
+}*/

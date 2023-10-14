@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 17:09:32 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/03 17:12:46 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:23:31 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,24 @@
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	char	*substring;
-
-	if (s == NULL)
-		return (NULL);
-	if (ft_strlen(s) < start)
-		len = 0;
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen (s + start);
-	substring = malloc(len + 1);
-	if (substring == NULL)
-		return (NULL);
-	ft_strlcpy(substring, s + start, len + 1);
-	return (substring);
-}
-/*char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*sub;
+	char	*new_str;
 	size_t	i;
 	size_t	j;
 
-	sub = NULL;
-	sub = (char *)malloc(len + 1);
-	if (!s || !sub)
+	if (!*s || ft_strlen(s) <= start)
+		return (ft_strdup("\0"));
+	if (ft_strlen(s + start) <= len)
+		len = ft_strlen(s + start);
+	new_str = (char *)malloc(len + 1);
+	if (!new_str)
 		return (NULL);
-	i = 0;
-	j = start;
-	while (i < len && j < ft_strlen(s))
-	{
-		sub[i] = s[j];
-		i++;
-		j++;
-	}
-	sub[i] = '\0';
-	return (sub);
-}*/
+	i = start;
+	j = 0;
+	while (i < ft_strlen(s) && j < len)
+		new_str[j++] = s[i++];
+	new_str[j] = '\0';
+	return (new_str);
+}
 
 /*int main()
 {
@@ -57,3 +40,22 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
     printf("%s", sub);
     return 0;
 }*/
+	//char	*substring;
+	//size_t	i;
+	//size_t	j;
+
+	//if (!s)
+	//	return (NULL);
+	//substring = (char *)malloc(len + 1);
+	//if (!substring)
+	//	return (NULL);
+	//i = 0;
+	//j = start;
+	//while (j < ft_strlen(s) && i < len)
+	//{
+	//	substring[i] = s[j];
+	//	i++;
+	//	j++;
+	//}
+	//substring[i] = '\0';
+	//return (substring);
