@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 17:09:32 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/13 18:23:31 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:50:37 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
+	new_str = NULL;
 	if (!*s || ft_strlen(s) <= start)
 		return (ft_strdup("\0"));
 	if (ft_strlen(s + start) <= len)

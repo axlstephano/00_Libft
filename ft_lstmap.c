@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 16:25:26 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/16 21:37:27 by axcastil         ###   ########.fr       */
+/*   Created: 2023/10/17 04:38:33 by axcastil          #+#    #+#             */
+/*   Updated: 2023/10/17 11:41:56 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*duplicate;
-	char	*aux;
+	t_list	*lst2;
+	t_list	*nodo;
 
-	duplicate = (char *)malloc(ft_strlen(s1) + 1);
-	if (!duplicate)
-		return (NULL);
-	aux = duplicate;
-	while (*s1)
+	if (!lst)
+		return (0);
+	lst2 = 0;
+	while (lst)
 	{
-		*duplicate = *s1;
-		duplicate++;
-		s1++;
+		nodo = ft_lstnew(f(lst->content));
+		if (!nodo)
+		{
+			ft_lstclear(&lst2, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&lst2, nodo);
+		lst = lst->next;
 	}
-	*duplicate = '\0';
-	return (aux);
+	return (lst2);
 }
-
-/*int main()
-{
-    char *str = "hola";
-    printf("%s", ft_strdup(str));
-    return 0;
-}*/

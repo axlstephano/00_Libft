@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 21:59:32 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/09 09:52:31 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/16 23:33:34 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*#include <stdio.h>
-#include <string.h>
 
-int	main(void)
+/*int	main(void)
 {
 	char	*string;
 

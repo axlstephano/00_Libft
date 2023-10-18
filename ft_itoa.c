@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 07:18:49 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/09 12:02:43 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:49:39 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ static char	*min(void)
 	char	*str;
 
 	str = (char *)malloc(sizeof(char) * 12);
+	if (!str)
+		return (NULL);
 	ft_strlcpy(str, "-2147483648", 12);
 	return (str);
 }
@@ -72,8 +74,8 @@ char	*ft_itoa(int n)
 	}
 	return (string);
 }
-/*
-int main()
+
+/*int main()
 {
 	int number = -345;
 	printf("%s", ft_itoa(number));

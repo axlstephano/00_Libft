@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:31:55 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/03 16:49:33 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/17 04:33:06 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 				d[len] = s[len];
 	return (dst);
 }
+
 /*int main()
 {
-    char    d[] = "hola";
-    char    e[10];
-    printf("%s\n", ((char *)ft_memmove(e, d, 4)));
-    printf("%s", e);
-    return 0;
+    char    s[] = "42madrid";
+    char    d[9];
+    printf("%s\n", ((char *)ft_memmove(d, s,8)));
+    //printf("%s\n", s);
+	//printf("%s\n", d);
+	//printf("%p\n", s);
+	//printf("%p\n", d);
+	//printf("%ld\n", d - s);
+	//printf("%ld\n", s - d);
+    //}
+    //return 0;
 }*/

@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 16:59:26 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/14 18:31:47 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/18 19:43:42 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,18 +62,16 @@ static void	ft_free(char *str)
 char	**ft_split(char const *s, char c)
 {
 	char	**matrix;
-	size_t	words;
 	size_t	wordsize;
 	size_t	start;
 	size_t	j;
 
-	words = wordcount(s, c);
-	matrix = (char **)malloc((words + 1) * sizeof(char *));
+	matrix = (char **)malloc((wordcount(s, c) + 1) * sizeof(char *));
 	if (!matrix)
 		return (NULL);
 	start = 0;
 	j = -1;
-	while (++j < words)
+	while (++j < wordcount(s, c))
 	{
 		while (s[start] == c)
 			start++;
