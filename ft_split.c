@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 16:59:26 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/18 19:43:42 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/19 16:58:39 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,12 @@ static	size_t	wordlen(char const *s, char c)
 	return (size);
 }
 
-static void	ft_free(char *str)
+static void	ft_free(size_t i, char **str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (i > 0)
 	{
-		free(str);
-		i++;
+		i--;
+		free(*(str + i));
 	}
 	free(str);
 }
@@ -66,6 +63,8 @@ char	**ft_split(char const *s, char c)
 	size_t	start;
 	size_t	j;
 
+	if (!s)
+		return (NULL);
 	matrix = (char **)malloc((wordcount(s, c) + 1) * sizeof(char *));
 	if (!matrix)
 		return (NULL);
@@ -78,7 +77,7 @@ char	**ft_split(char const *s, char c)
 		wordsize = wordlen(s + start, c);
 		matrix[j] = ft_substr(s, start, wordsize);
 		if (!matrix[j])
-			return (ft_free(*matrix), NULL);
+			return (ft_free(j, matrix), NULL);
 		start += wordsize;
 	}
 	matrix[j] = 0;
