@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 15:37:25 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/07 16:50:51 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:11:39 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
+	size_t	dlen;
 
+	dlen = ft_strlen(dst);
 	if (dstsize <= ft_strlen(dst))
 		return (dstsize + ft_strlen(src));
 	i = 0;
@@ -44,7 +46,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[j++] = src[i++];
 	}
 	dst[j] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[i]));
+	return (dlen + ft_strlen(src));
 }
 /*int main()
 {

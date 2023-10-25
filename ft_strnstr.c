@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:26:06 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/03 17:21:45 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/21 16:39:20 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	j = 0;
 	if (!*needle)
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
 	{
 		if (haystack[i] == needle[0])
 		{
+			j = 0;
 			while ((needle[j] != '\0'
 					&& haystack[i + j] == needle[j] && (i + j) < len))
 			{

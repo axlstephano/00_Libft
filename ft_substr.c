@@ -6,7 +6,7 @@
 /*   By: axcastil <axcastil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 17:09:32 by axcastil          #+#    #+#             */
-/*   Updated: 2023/10/18 16:50:37 by axcastil         ###   ########.fr       */
+/*   Updated: 2023/10/21 20:41:31 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
     printf("%s", sub);
     return 0;
 }*/
-	//char	*substring;
-	//size_t	i;
-	//size_t	j;
-
-	//if (!s)
-	//	return (NULL);
-	//substring = (char *)malloc(len + 1);
-	//if (!substring)
-	//	return (NULL);
-	//i = 0;
-	//j = start;
-	//while (j < ft_strlen(s) && i < len)
-	//{
-	//	substring[i] = s[j];
-	//	i++;
-	//	j++;
-	//}
-	//substring[i] = '\0';
-	//return (substring);
