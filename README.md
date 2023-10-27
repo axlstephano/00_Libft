@@ -1,4 +1,4 @@
 # 42_libft
-```python
+```c
 def hola_mundo():
     print("Hola, mundo!")
