@@ -6,11 +6,11 @@
 /*   By: axcastil <axcastil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:31:26 by axcastil          #+#    #+#             */
-/*   Updated: 2024/06/16 12:21:31 by axcastil         ###   ########.fr       */
+/*   Updated: 2024/06/16 13:25:00 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: axcastil <axcastil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 15:36:43 by axcastil          #+#    #+#             */
-/*   Updated: 2024/06/16 12:22:39 by axcastil         ###   ########.fr       */
+/*   Updated: 2024/06/16 13:25:00 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

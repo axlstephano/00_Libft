@@ -6,11 +6,11 @@
 /*   By: axcastil <axcastil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:15:55 by axcastil          #+#    #+#             */
-/*   Updated: 2024/06/16 12:23:05 by axcastil         ###   ########.fr       */
+/*   Updated: 2024/06/16 13:25:00 by axcastil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
