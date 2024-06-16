@@ -6,7 +6,7 @@
 #    By: axcastil <axcastil@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 13:53:55 by axcastil          #+#    #+#              #
-#    Updated: 2024/06/16 13:20:01 by axcastil         ###   ########.fr        #
+#    Updated: 2024/06/16 17:07:16 by axcastil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ BONUS		=	$(wildcard sources/*bonus.c)
 
 BONUS_OBJS	=	$(BONUS:.c=.o)
 
-NAME 			= libft
+NAME 		= libft.a
 
 CC			=	gcc
 RM			=	rm -f
